@@ -1,0 +1,12 @@
+
+services:
+  server:
+    container_name: satisfactory-dedicated-server
+    build: .
+    ports:
+      - "15777:15777/udp"
+      - "15000:15000/udp"
+      - "7777:7777/udp"
+      - "7777:7777/tcp"
+    volumes:
+      - ./saves:/home/steam/.config/Epic/FactoryGame/Saved/SaveGames/server
